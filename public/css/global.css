@@ -1,0 +1,54 @@
+/* RESET & PADRÃO GLOBAL */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* IMAGENS RESPONSIVAS */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* VARIÁVEIS DE COR (PERSONALIZÁVEIS) */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e293b;
+    --bg-color: #ffffff;
+    --text-color: #1f2937;
+    --surface-color: #f1f5f9;
+}
+
+/* MODO ESCURO AUTOMÁTICO */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #0f172a;
+        --text-color: #e5e7eb;
+        --surface-color: #1e293b;
+    }
+}
+
+/* CONTAINER PADRÃO */
+.container {
+    width: min(1200px, 90%);
+    margin: auto;
+}
+
+.main-content {
+    padding: 2rem 0;
+}

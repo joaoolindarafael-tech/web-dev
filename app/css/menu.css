@@ -1,0 +1,133 @@
+.header {
+    gap: 1.5rem;  
+    background: var(--surface-color);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    
+}
+.header .brilho{
+    opacity: 0.3;
+    /* transform: rotate(30deg); */
+    transition: all 0.4s ;
+     left: -10%;
+     position: absolute;
+     height: 60px;
+    width: 400px;
+     
+}
+
+.header:hover > .brilho {
+    left: 30%;
+    background:linear-gradient(to right  , transparent,#aaa,transparent);
+    
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* MENU DESKTOP */
+.nav-desktop {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-desktop a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.nav-desktop a:hover {
+    color: var(--primary-color);
+}
+
+/* BOTÃO MENU MOBILE */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+/* MENU MOBILE (SLIDE DA DIREITA) */
+.nav-mobile {
+    overflow: hidden;
+    background: rgba(0,0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width:  100%;
+    height: 100%;
+    transition: color right 0.8s ease;
+    z-index: 2;
+}
+
+.nav-mobile  div{
+    position: fixed;
+    background: var(--surface-color) ;
+    opacity: 0.97;
+    padding: 0.1rem 2rem;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 10px 0;
+    box-shadow: 6px 2px 8px 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    transition: right 0.3s ease;
+    z-index: 1;
+    float: right;
+    right: -100%;
+    width:  50%;    
+    height: 100%;
+}
+
+.nav-mobile.active {
+    right: 0;
+}
+.nav-mobile.active > div {
+    right: 0;
+}
+.nav-mobile a {
+     
+    padding: 0.5rem 20px;   
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+.nav-mobile a:hover {   
+    color: var(--surface-color);
+    background-color: var(--primary-color);
+}
+.close-menu {
+    font-weight: bold;
+    padding : 7 40px;
+    align-self: flex-end;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .nav-desktop {
+        display: none;
+    }
+    .header .brilho{
+        display: none;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}

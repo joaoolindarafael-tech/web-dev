@@ -1,0 +1,87 @@
+.header {
+    background: var(--surface-color);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* MENU DESKTOP */
+.nav-desktop {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-desktop a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.nav-desktop a:hover {
+    color: var(--primary-color);
+}
+
+/* BOTÃO MENU MOBILE */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+/* MENU MOBILE (SLIDE DA DIREITA) */
+.nav-mobile {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100%;
+    background: var(--surface-color);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.nav-mobile.active {
+    right: 0;
+}
+
+.nav-mobile a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.close-menu {
+    align-self: flex-end;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .nav-desktop {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
