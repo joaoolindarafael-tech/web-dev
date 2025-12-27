@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import Banner from "../components/Banner";
 
 export default function servicosPage() {
-  useEffect(()=>{document.title="SERVIÇOS"},[document.title])
+ 
   return (<>
  
   <section className="container main-content">
