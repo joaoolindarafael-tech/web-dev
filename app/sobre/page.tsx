@@ -6,7 +6,7 @@ import { createPool, Pool } from 'mysql2';
  
 
 export default function SobrePage() {
-   document.title="SOBRE NÓS"
+ 
    
   var lista = [ "red" , "blue" , "green"  ]
   var [color,setColor] = useState("red")
