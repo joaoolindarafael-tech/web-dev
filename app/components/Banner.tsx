@@ -1,7 +1,7 @@
 import { url } from "inspector";
 import { useEffect } from "react";
 
-export default function Banner(sliderType){
+export default function Banner(){
     
     useEffect(() => {
     const track = document.querySelector(".carousel-track");
