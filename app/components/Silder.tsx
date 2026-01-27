@@ -29,7 +29,7 @@ export default function Banner() {
       prev === slides.length - 1 ? 0 : prev + 1
     );
   };
-
+   {/* sdgsdgsdgsdg */}
   const prevSlide = () => {
     setCurrentIndex((prev) =>
       prev === 0 ? slides.length - 1 : prev - 1
