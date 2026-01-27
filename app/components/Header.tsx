@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <div>
       <header className="header">
-        <div className="brilho"></div>
+        {/*<div className="brilho"></div>*/}
 
         <div className="container header-content">
           <Link href="/" className="logo flex">

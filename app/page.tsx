@@ -5,6 +5,7 @@ import { use, useEffect, useState } from "react";
 import Banner from "./components/Banner";
 import { title } from "process";
 import { metadata } from "./layout";
+import Slider from "./components/Silder";
 
 export const controle = () => { 
     return  {  name : "Desenvolvimento de App" , descricao: "Sistemas personalizados para geolocalização, monitoramento e controlo de estoque pelo celular." }
@@ -22,7 +23,7 @@ const [btn , setBtn] = useState({})
   return (
       <> 
 
-          <Banner  />
+          <Slider  />
           {/* <!-- =======================
               SESSÃO 2 – APRESENTAÇÃO
           ======================== --> */}

@@ -26,10 +26,12 @@ export default function Banner() {
           ref={trackRef}
           style={{ background: "#000", zIndex: 1000 }}
         >
+           <div className="slideGround">fghdfjdfjdj</div>
           <div
             className="slide active"
             style={{ background: "url('./slider/cursos.webp') center center" }}
           >
+           
             <h2>Soluções Tecnológicas Modernas</h2>
             <p>Transformamos ideias em soluções digitais eficientes.</p>
           </div>
