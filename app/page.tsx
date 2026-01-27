@@ -30,7 +30,7 @@ const [btn , setBtn] = useState({})
           <section className="about container   main-content">
               <h2  >Quem Somos</h2>
               <p>
-                  Atuamos na área da informática oferecendo soluções em tecnologia,
+                  Atuamos na área TI oferecendo soluções em tecnologia,
                   desenvolvimento de sistemas, redes de computadores e segurança digital.
                   Trabalhamos com foco na inovação, eficiência e qualidade.
               </p>
@@ -44,7 +44,7 @@ const [btn , setBtn] = useState({})
 
               <div className="services-grid">
                   <div className="service-card">
-                      <h4>Desenvolvimento de Software</h4>
+                      <h4>Desenvolvimento de Software e Implementação de Redes Estruturadas</h4>
                       <p>Sistemas personalizados para gestão, faturação e controlo.</p>
                   </div>
 

@@ -76,7 +76,7 @@ export default function Header() {
           </button>
 
           <Link href="/" onClick={menuToggling}>Início</Link>
-          <Link href="/sobre" onClick={menuToggling}>Sobre Nós</Link>
+          <Link href="/sobre" onClick={menuToggling}>Quem Somos</Link>
           <Link href="/servicos" onClick={menuToggling}>Serviços</Link>
           <Link href="/products" onClick={menuToggling}>Portfólio</Link>
           <Link href="#contatos" onClick={menuToggling}>Contacto</Link>
