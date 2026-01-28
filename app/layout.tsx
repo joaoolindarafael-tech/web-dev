@@ -6,9 +6,9 @@ import Footer from "./components/Footer"
 import Banner from "./components/Banner";
 import Link from "next/link";
 
-import   "./css/menu.css"
+import   "./css/menu.css" 
 import   "./css/footer.css"  
-import   "./css/home.css" 
+import   "./css/home.css"   
 
 const geistSans = Geist({  
   variable: "--font-geist-sans",

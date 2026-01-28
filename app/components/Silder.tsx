@@ -6,21 +6,21 @@ export default function Banner() {
   const slides = [
     {
       id: 1,
-      src: "/slider/clientes.webp",
-      title: "Primeiro Banner",
-      description: "Legenda visível sobre a imagem"
+      src: "/slider/profissionais.webp",
+      title: "Nossos Profissionais",
+      description: "Uma equipe treinada para atender você"
     },
     {
       id: 2,
       src: "/slider/clientes.webp",
-      title: "Segundo Banner",
-      description: "Slider fluido e responsivo"
+      title: "Levamos a sério nossos clientes",
+      description: "aqui sua empresa é mais valorizada"
     },
     {
       id: 3,
-      src: "/slider/clientes.webp",
-      title: "Terceiro Banner",
-      description: "70vh de altura no dispositivo"
+      src: "/slider/cursos.webp",
+      title: "Desenvolvimento Contínuo",
+      description: "Sempre atualizados com as últimas tecnologias"
     }
   ];
 
