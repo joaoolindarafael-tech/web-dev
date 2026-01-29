@@ -1,3 +1,5 @@
+@import url("../../node_modules/tailwindcss/index.css");
+
 /* RESET & PADRÃO GLOBAL */
 *,
 *::before,
@@ -7,6 +9,25 @@
     padding: 0;
 }
 
+/* ==================================================
+   ESTILOS GERAIS 
+================================================== */
+section {
+    
+    z-index: 999;
+    padding: 4em 0;
+    position: relative;
+}
+
+section h2  {
+    font-size: 2em;    
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+.section .card-grid * {
+    z-index: 1;
+}
 html {
     font-size: 16px;
     scroll-behavior: smooth;
@@ -17,7 +38,104 @@ body {
     background: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
+    
 }
+main{
+    min-height: 80vh;
+}
+/* ==================================================
+   SESSÃO 1 – CARROSSEL
+================================================== */
+.carousel {
+    background: linear-gradient(to right, transparent , transparent , var( --surface-color));
+    
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+}
+ 
+.slide {
+    position: relative;
+    overflow: hidden;
+    min-width: 100%;
+    padding: 0;
+    text-align: center;
+}
+
+.slide h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* ==================================================
+   SESSÃO 2 – APRESENTAÇÃO
+================================================== */
+.about {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.about p {
+    font-size: 1.05rem;
+}
+
+/* ==================================================
+   CARDS
+================================================== */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.5rem;
+}
+
+.card { 
+    cursor: pointer;   
+    padding: 0;
+    border-radius: 10px;
+    
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+.card img{
+    border-radius: 1em 1em 0 0;
+     
+}
+.card-body{
+    
+    padding: 1em;
+    border-radius: 0 0 1em 1em;
+    background: var(--surface-color);
+}
+.card-footer{
+    margin-top: 10px;
+    justify-content: left;
+    text-align: left;
+}
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+/*  MOLDURAS CIRCULARES  */
+.molde-service{
+  
+    overflow-y: hidden;
+    left: -100;        
+    position: absolute;
+    border-radius: 50%;
+    background:#0f172a;
+    height: 200px;
+    width: 200px;
+
+}
+
 
 /* IMAGENS RESPONSIVAS */
 img {
@@ -25,8 +143,27 @@ img {
     display: block;
 }
 
+
+/* BOTOENS */
+.btn{
+    padding: 4px 10px 4px 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: color 0.3s linear;
+    border:  #0f172a solid 0.3px;
+    color: var(--text-color);
+}
+.btn:hover{
+    border: #1e293b solid 0.3px;
+    color:  #ccc;
+    background-color: #0f172a;  
+}
+
+ 
+
 /* VARIÁVEIS DE COR (PERSONALIZÁVEIS) */
 :root {
+     
     --primary-color: #2563eb;
     --secondary-color: #1e293b;
     --bg-color: #ffffff;
@@ -37,18 +174,47 @@ img {
 /* MODO ESCURO AUTOMÁTICO */
 @media (prefers-color-scheme: dark) {
     :root {
+        --primary-color:#fff;
+        --secondary-color:#fff;         
         --bg-color: #0f172a;
         --text-color: #e5e7eb;
         --surface-color: #1e293b;
     }
-}
 
+    .btn:hover{  
+    background-color: green;  
+    }
+    .btn{  
+    background-color: #0f172a;  
+    }
+
+
+
+}
+@media (max-width: 768px) {
+
+    footer{
+        text-align: center;
+        margin: auto;
+      
+    }
+    footer div{
+        display: inline-block!important;
+        margin-top: 10px;
+    }
+}
 /* CONTAINER PADRÃO */
 .container {
     width: min(1200px, 90%);
     margin: auto;
 }
-
-.main-content {
-    padding: 2rem 0;
+footer{
+   
+    min-height: 200px;
+    bottom: 0;
+}
+footer div{
+     padding: 30px;
+     display: flex;
+     margin-left: 10px;
 }

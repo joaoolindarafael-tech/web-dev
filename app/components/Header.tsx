@@ -20,7 +20,7 @@ export default function Header() {
         {/*<div className="brilho"></div>*/}
 
         <div className="container header-content">
-          <Link href="/" className="logo flex">
+          <Link href="/" className="logo flex rounded">
             &nbsp;
             <img
               className="mr-2"
@@ -28,7 +28,8 @@ export default function Header() {
               alt="Logo"
               width={40}
             />
-            <strong>INFOJOR</strong>
+            &nbsp;
+            <strong> INFOJOR</strong>
           </Link>
 
           {/* Menu Desktop */}

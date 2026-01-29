@@ -28,9 +28,9 @@ const [btn , setBtn] = useState({})
               SESSÃO 2 – APRESENTAÇÃO
           ======================== --> */}
           <section className="about container   main-content">
-              <h2  >Quem Somos</h2>
+              <h2  >QUEM SOMOS</h2>
               <p>
-                  Atuamos na área TI oferecendo soluções em tecnologia,
+                  Actuamos fortemente na área TI oferecendo soluções em tecnologia,
                   desenvolvimento de sistemas, redes de computadores e segurança digital.
                   Trabalhamos com foco na inovação, eficiência e qualidade.
               </p>
@@ -38,31 +38,58 @@ const [btn , setBtn] = useState({})
       {/* 
           <!-- =======================
               SESSÃO 3 – SERVIÇOS
-          ======================== --> */}
-          <section className="services container">
-              <h2>Serviços Prestados</h2>
+          ======================== --> */
+        }
+         <section className="services container">
+              <div className="molde-service">
+                 
+              </div>
+              <h2>SERVIÇOS</h2>
 
-              <div className="services-grid">
-                  <div className="service-card">
-                      <h4>Desenvolvimento de Software e Implementação de Redes Estruturadas</h4>
-                      <p>Sistemas personalizados para gestão, faturação e controlo.</p>
-                  </div>
+                <div className="card-grid">
+                  
+                    <div className="card">
+                      <img  alt="" src={"/dev.jpg"} />
+                      <div className="card-body">
+                        
+                        <h4><strong>Desenvolvimento Web</strong></h4>
+                        <br />
+                        <p>Sistemas personalizados para gestão, faturação e controlo.</p>                
+                      </div>
+                    </div>
 
-                  <div className="service-card">
-                      <h4>Redes de Computadores</h4>
-                      <div className="py-3"><p>Instalação, configuração e manutenção de redes locais.</p></div>
+                    <div className="card">
+                      <img  alt="" src={"./slider/profissionais.webp"} />
+                      <div className="card-body">                        
+                        <h4><strong>Marketig Digital</strong></h4>
+                        <br />
+                        <p>Sistemas personalizados para gestão, faturação e controlo.</p>                
+                      </div>
+                    </div>
 
-                  </div>
+                    <div className="card">
+                      <img  alt="" src={"./slider/clientes.webp"} />
+                      <div className="card-body">                        
+                        <h4><strong>Auditorias</strong></h4>
+                        <br />
+                        <p>Sistemas personalizados para gestão, faturação e controlo.</p>                
+                      </div>
+                    </div>
 
-                  <div className="service-card">
-                      <h4> { controle().name }</h4>
-                      <p>{controle().descricao}</p>
-                  </div>
-
-                  <div className="service-card">
-                      <h4>Assistência Técnica</h4>
-                      <p>Manutenção e reparação de computadores e equipamentos.</p>
-                  </div>
+                    <div className="card">
+                      <img  alt="" src={"./slider/cursos.webp"} />
+                      <div className="card-body">                        
+                        <h4><strong>Resolução de Bugs online </strong></h4>
+                        <br />
+                        <p>Sistemas personalizados para gestão, faturação e controlo.</p>                
+                        <div className="card-footer">
+                        <button  className="btn bg-primary"  >
+                            Soliciar orçamento
+                        </button>
+                        </div>
+                      </div>
+                    </div>                    
+                 
               </div>
           </section>
 
@@ -70,7 +97,7 @@ const [btn , setBtn] = useState({})
               SESSÃO 4 – CLIENTES & PARCEIROS
           ======================== --> */}
           <section className= "partners container main-content ">
-              <h2>Clientes & Parceiros</h2>
+              <h2>CLIENTE & PARCEIROS</h2>
 
               <div className="partners-grid">
                   <div className="partner">Empresa Alpha</div>
@@ -84,7 +111,7 @@ const [btn , setBtn] = useState({})
               SESSÃO 5 – NOTÍCIAS
           ======================== --> */}
           <section className="news container main-content">
-              <h2>Notícias</h2>
+              <h2>NOTICIAS</h2>
 
               <div className="news-grid">
                   <article className="news-card">

@@ -13,15 +13,17 @@ export default function SobrePage() {
 
   return (
   <>
-    <section className="container main-content">
-      <div  >
-        <h1 >Sobre Nós</h1>       
-        <p>Esta é a página de sobre da nossa aplicação.</p>
-        
-      </div>      
-        
- 
-    </section>
+       {/* <!-- =======================
+              SESSÃO 2 – APRESENTAÇÃO
+          ======================== --> */}
+          <section className="about container   main-content">
+              <h2  >QUEM SOMOS</h2>
+              <p>
+                  Actuamos fortemente na área TI oferecendo soluções em tecnologia,
+                  desenvolvimento de sistemas, redes de computadores e segurança digital.
+                  Trabalhamos com foco na inovação, eficiência e qualidade.
+              </p>
+          </section>
   </>
 
   );
