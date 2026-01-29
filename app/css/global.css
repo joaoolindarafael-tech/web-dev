@@ -1,14 +1,5 @@
 @import url("../../node_modules/tailwindcss/index.css");
-
-/* RESET & PADRÃO GLOBAL */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+ 
 /* ==================================================
    ESTILOS GERAIS 
 ================================================== */
@@ -198,10 +189,11 @@ img {
         margin: auto;
       
     }
-    footer div{
+    footer .container{
         display: inline-block!important;
         margin-top: 10px;
     }
+  
 }
 /* CONTAINER PADRÃO */
 .container {
@@ -213,8 +205,27 @@ footer{
     min-height: 200px;
     bottom: 0;
 }
-footer div{
-     padding: 30px;
-     display: flex;
-     margin-left: 10px;
+
+footer .container{
+      display: flex;
+}
+
+footer  .mapa-de-servicos, .mapa-do-site, .redes-sociais, .contactos {
+     padding: 5% 5%;
+     text-align: left;
+     display: block;    
+}
+ 
+
+footer .mapa-do-site ul li{
+    padding-bottom: 10px;
+}
+footer .direitos {
+    width: 100%;
+    text-align: center!important;
+}
+
+
+footer .mapa-de-servicos {
+    text-align:left ;  
 }
