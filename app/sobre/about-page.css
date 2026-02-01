@@ -1,0 +1,97 @@
+ /* ABOUT-SECTION */
+
+.about-section {  
+    background-image: url('/tec.png') ;
+    background-size: cover  ; 
+    background-position: fixed ;
+    background-position: center;
+    height: 100vh;
+    padding: auto;
+
+}
+
+.about-section::before {  
+    content: ""; 
+    opacity: 0.5 ;
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7); /* controla a opacidade aqui */
+    z-index: 1;
+      
+}
+
+.about-section .about-description {
+    text-align: left;
+    font-size:1.5em;
+    position: relative;
+    z-index: 2;
+    color: white;
+    
+}
+
+.about-section .about-description H2 {
+ 
+    color: #FFF;
+    
+}
+.about-section  > div   { 
+    display: grid;
+    align-items: center;
+    justify-content: left;         
+    height: 100%;     
+}
+
+ 
+
+/* MISSION-SECTION */
+
+.objective-section {  
+    background-color: var(--surface-color); 
+    background-size: cover  ; 
+    background-position: fixed ;
+    background-position: center;
+    height: auto;
+
+   
+       
+}
+
+.objective-section::before {  
+    /*content: "";*/ 
+    opacity: 1;
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7); /* controla a opacidade aqui */
+     
+      
+}
+
+.objective-section .objective-description {
+     
+    position: relative;
+    z-index: 2;
+    color: white;
+     
+}
+.objective-section .objective-description h2 {
+    
+    color: var(--secondary-color) !important;
+    
+}
+.objective-section .card{
+    border-radius: 10px;
+    padding: 1rem;
+    background: var(--bg-color);
+     
+    box-shadow: 5px 4px 12px rgba(0, 0, 1, 0.272);
+}
+ 
+ .objective-section .card .card-body{
+    border-radius: 5px;
+    color: var(--text-color);
+    background: var(--bg-color);
+}
+ .objective-section .card .card-body p{
+    text-align: left;
+    
+}

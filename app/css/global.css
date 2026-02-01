@@ -3,8 +3,7 @@
 /* ==================================================
    ESTILOS GERAIS 
 ================================================== */
-section {
-     
+section {     
     padding: 4em 0;
     position: relative;
 }
@@ -24,7 +23,7 @@ html {
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: open-sans, sans-serif ;
     background: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
@@ -194,11 +193,16 @@ img {
     }
   
 }
+
+
 /* CONTAINER PADRÃO */
 .container {
     width: min(1200px, 90%);
     margin: auto;
 }
+
+
+
 footer{
    
     min-height: 200px;
