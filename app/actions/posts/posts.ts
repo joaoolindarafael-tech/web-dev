@@ -1,8 +1,8 @@
 "use server"
 
-import prisma from "@/lib/prisma"
+import prisma from "../../../lib/prisma"
 import { createPostSchema, CreatePostSchema } from "./validators"
-import { Post } from "@/app/generated/prisma/client"
+import { Post } from "../../generated/prisma/client"
 import z from "zod"
 
 export const getPosts = async() => {

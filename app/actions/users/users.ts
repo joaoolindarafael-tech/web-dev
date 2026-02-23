@@ -1,9 +1,10 @@
 "use server"
 
-import prisma from "@/lib/prisma"
+ import   prisma   from "../../../lib/prisma" 
+ 
 import z from "zod"
 import { createUserSchema, CreateUserSchema } from "./validators"
-import { User } from "@/app/generated/prisma/client"
+import { User } from "../../generated/prisma/client"
 
 export const createUser = async(data: CreateUserSchema): Promise<User | {success: boolean, message: string, error?: string[]}> => {
 try {
