@@ -6,6 +6,8 @@ import Banner from "./components/Banner";
 import { title } from "process";
 import { metadata } from "./layout";
 import Slider from "./components/Silder";
+import { createPost, getPosts } from "./actions/posts/posts";
+import { createUser } from "./actions/users/users";
 
 export const controle = () => { 
     return  {  name : "Desenvolvimento de App" , descricao: "Sistemas personalizados para geolocalização, monitoramento e controlo de estoque pelo celular." }
@@ -14,8 +16,62 @@ export const controle = () => {
  
 export default function Home() {
 
+    // only for testing purposes
+useEffect(() => {
+
+    const loadPosts = async() => {
+const posts = await getPosts()
+
+console.info("POSTS", posts)
+
+    }
+
+    loadPosts()
+
+}, [])
+    
+
+
+
+
+// handlers
+
+const handleCreateUser = async () => {
+    
+    try {
+        const createUsers = await createUser({
+            name: "Emanuel",
+            email: "maquete2@test.com",
+            password: "minhasenha0123"
+        })
+
+        console.log(createUsers)
+
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+const handleCreatePost = async () => {
+    
+    try {
+        const createPosts = await createPost({
+            title: "Emanuels posts",
+            authorId:"ae4bc394-97e4-4cd3-9eee-4849fbc06877",
+            content: `Post do user: 307982b2-1bfc-47f6-ba6d-9625d9b23f0f, aos ${Date.now()}
+`
+        })
+
+        console.log(createPosts)
+
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+
  useEffect(()=>{
-    document.title="BEM-VINDO | HOME"
+    document.title="BEM-VINDO | INFOJOR"
  },[])
 
 const [btn , setBtn] = useState({})
@@ -83,8 +139,16 @@ const [btn , setBtn] = useState({})
                         <br />
                         <p>Sistemas personalizados para gestão, faturação e controlo.</p>                
                         <div className="card-footer">
-                        <button  className="btn bg-primary"  >
+                        <button 
+                        onClick={handleCreateUser}
+                        className="btn bg-primary"  >
                             Soliciar orçamento
+                        </button>
+                       
+                        <button 
+                        onClick={handleCreatePost}
+                        className="btn bg-primary"  >
+                            Criar Post
                         </button>
                         </div>
                       </div>

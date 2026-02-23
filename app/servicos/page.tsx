@@ -6,7 +6,7 @@ export const controle = () => {
 }
 export default function servicosPage() {
   useEffect(()=>{
-     document.title="BEM-VINDO | HOME"
+     document.title="SERVIÇOS | INFOJOR"
   },[])
   
   return (<>

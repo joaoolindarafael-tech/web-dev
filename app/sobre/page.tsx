@@ -3,11 +3,13 @@ import { useEffect, useRef, useState } from 'react';
 
 import './about-page.css';
 import { createPool, Pool } from 'mysql2';
- 
-
+  
 export default function SobrePage() {
  
-   
+    useEffect(() => {
+    document.title = "SOBRE-NÓS | INFOJOR"
+  }, [])
+
   var lista = [ "red" , "blue" , "green"  ]
   var [color,setColor] = useState("red")    
  

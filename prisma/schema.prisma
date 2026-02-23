@@ -1,0 +1,63 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id String @id @default(uuid())
+  name String @db.VarChar(60)
+  email String @db.VarChar(60) @unique
+  password String @db.Text()
+
+  createdAt DateTime @default(now()) @map("created_at")
+updatedAt DateTime @updatedAt @map("updated_at")
+
+  posts Post[]
+  books Book[]
+
+@@index([email])
+  @@map("users")
+}
+
+model Post {
+  id String @id @default(uuid())
+  title String
+content String?
+authorId String @map("author_id")
+published Boolean @default(false)
+
+createdAt DateTime @default(now()) @map("created_at")
+updatedAt DateTime @updatedAt @map("updated_at")
+
+author User @relation(fields: [authorId], references: [id])
+
+@@index([title])
+
+@@map("posts")
+}
+
+model Book {
+  id String @id @default(uuid())
+  title String
+  year Int
+  authorId String
+  createdAt DateTime @default(now()) @map("created_at")
+updatedAt DateTime @updatedAt @map("updated_at")
+
+
+  
+
+users User @relation(fields: [authorId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+@@map("books")
+}

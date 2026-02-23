@@ -38,7 +38,7 @@ export default function Header() {
             <Link href="/">Início</Link>
             <Link href="/sobre">Sobre Nós</Link>
             <Link href="/servicos">Serviços</Link>
-            <Link href="/products">Portfólio</Link>
+            <Link href="/portfolio">Portfólio</Link>
             <Link href="#contatos">Contacto</Link>
           </nav>
 

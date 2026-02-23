@@ -1,0 +1,50 @@
+/* =========================
+   PÁGINA PORTFÓLIO
+========================= */
+
+.portfolio-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.portfolio-card {
+    background: var(--surface-color);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.portfolio-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.portfolio-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+}
+
+.portfolio-body h4 {
+    margin: 0;
+}
+
+.portfolio-tech {
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
